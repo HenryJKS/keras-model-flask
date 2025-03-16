@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+
+    <h1>Information Received</h1>
+    <ul>
+        <li>Sepal Length: {{session['sepal_length']}}</li>
+        <li>Sepal Width: {{session['sepal_width']}}</li>
+        <li>Petal Length: {{session['petal_length']}}</li>
+        <li>Petal Width: {{session['petal_width']}}</li>
+    </ul>
+
+    <hr/>
+
+    <h2>Prediction Result</h2>
+
+    <p><strong>Classification:</strong> {{ results['Prediction'] }}</p>
+    <p><strong>Confiança:</strong> {{ "%.2f"|format(results['Confidence'] * 100) }}%</p>
+
+    <a href="{{ url_for('predict_route.index') }}">Fazer outra previsão</a>
+</body>
+</html>

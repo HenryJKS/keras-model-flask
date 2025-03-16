@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Classification</title>
+</head>
+<body>
+    <h2>Flower Classification</h2>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        <label id="sepal_length" for="sepal_length">Comprimento da Sépala:</label>
+        {{ form.sepal_length(size=20) }}
+
+        <label id="sepal_width" for="sepal_width">Largura da Sépala:</label>
+        {{ form.sepal_width(size=20) }}
+
+        <label id="petal_length"  for="petal_length">Comprimento da Pétala:</label>
+        {{ form.petal_length(size=20) }}
+
+        <label id="petal_width" for="petal_width">Largura da Pétala:</label>
+        {{ form.petal_width(size=20) }}
+
+        <button type="submit">Classificar</button>
+    </form>
+</body>
+</html>
